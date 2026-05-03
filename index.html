@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>አገልግሎቶቻችን | ሳራ Catering & አገልግል</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-orange: #ff6b00;
+            --brand-dark: #1a1a1a;
+            --light-bg: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin: 0; }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services h2 { color: var(--brand-dark); font-size: 2.2rem; }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--brand-orange);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        /* Contact & Address Section */
+        .address-section {
+            background: var(--brand-dark);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .address-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px dashed var(--brand-orange);
+        }
+
+        .address-card h2 { color: var(--brand-orange); }
+
+        .info-item { margin: 20px 0; font-size: 1.1rem; }
+
+        .btn-container { margin-top: 30px; }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .call-btn { background: var(--brand-orange); color: white; }
+        .email-btn { border: 2px solid var(--brand-orange); color: var(--brand-orange); }
+
+        .btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+        footer { padding: 20px; text-align: center; background: #111; color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div>
+            <h1>ሳራ Catering & አገልግል</h1>
+            <p>ጥራትና ጣዕም መለያችን ነው!</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>አገልግሎቶቻችን</h2>
+        <div class="service-grid">
+            <div class="card">
+                <h3>ለተለያዩ ፕሮግራሞች</h3>
+                <p>ለሰርግ፣ ለልደት፣ ለምረቃ እና ለተለያዩ ዝግጅቶች የሚሆኑ ጣፋጭ ምግቦችን እናቀርባለን።</p>
+            </div>
+            <div class="card">
+                <h3>ልዩ ልዩ አገልግሎች</h3>
+                <p>እንደ ፍላጎትዎ የተዘጋጁ የተለያዩ ባህላዊና ዘመናዊ አገልግሎች በንጽህና ይቀርባሉ።</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="address-section">
+        <div class="address-card">
+            <h2>የት እንገኛለን?</h2>
+            <p>በአካል መጥተው ለመመገብና አገልግሎታችንን ለመቃኘት አድራሻችን፦</p>
+            
+            <div class="info-item">
+                📍 <strong>ባስኬትቦል (Basketball) ሜዳ</strong> አጠገብ <br>
+                <strong>ናፊ ምግብ ቤት (Nafi Restaurant)</strong> ብለው ቢመጡ ያገኙናል።
+            </div>
+
+            <div class="btn-container">
+                <a href="tel:+251920121235" class="btn call-btn">📞 አሁኑኑ ይደውሉ፡ +251920121235</a> <br>
+                <a href="mailto:saraayalkbet@gmail.com" class="btn email-btn">✉️ ኢሜይል ይላኩ</a>
+            </div>
+
+            <p style="margin-top: 30px; font-style: italic;">ስለ መረጡን ከልብ እናመሰግናለን!</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 ሳራ Catering & አገልግል - All Rights Reserved.
+    </footer>
+
+</body>
+</html>
