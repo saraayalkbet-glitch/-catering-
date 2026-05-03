@@ -15,17 +15,14 @@
         #home { height: 45vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; margin-top: 50px; }
         section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
         h2 { text-align: center; color: var(--dark); margin-bottom: 25px; border-bottom: 3px solid var(--primary); display: inline-block; width: 100%; padding-bottom: 10px; }
-        
-        /* Menu styles with clickable links */
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; }
-        .menu-link { text-decoration: none; color: inherit; transition: 0.3s; }
-        .menu-item { background: white; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid var(--primary); }
-        .menu-link:hover .menu-item { transform: scale(1.02); background: #fffcf5; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        
+        .menu-item-btn { background: white; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid var(--primary); text-decoration: none; color: inherit; transition: 0.2s; cursor: pointer; }
+        .menu-item-btn:hover { background: #fffcf5; transform: translateY(-2px); }
         .price { color: var(--primary); font-weight: bold; }
         .cat-tag { grid-column: 1 / -1; padding: 10px; background: #eee; border-radius: 5px; font-weight: bold; margin-top: 15px; text-align: center; }
-        .order-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; }
-        .tg-btn { background: #0088cc; color: white; padding: 18px; border-radius: 10px; text-decoration: none; display: block; font-weight: bold; font-size: 1.1rem; margin-bottom: 25px; }
+        .order-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; border-top: 5px solid var(--primary); }
+        .tg-btn { background: #0088cc; color: white; padding: 15px; border-radius: 10px; text-decoration: none; display: block; font-weight: bold; margin-bottom: 15px; }
+        .mail-btn { background: var(--dark); color: white; padding: 15px; border-radius: 10px; text-decoration: none; display: block; font-weight: bold; margin-bottom: 25px; }
         .payment-card { border: 2px dashed var(--telebirr); padding: 20px; border-radius: 10px; background: #f0f7ff; }
         footer { background: var(--dark); color: white; text-align: center; padding: 30px; margin-top: 40px; }
     </style>
@@ -40,51 +37,55 @@
 
     <section id="home">
         <h1>ሳራ Catering & አገልግል</h1>
-        <p>የፈለጉትን ምግብ ይምረጡና ትዕዛዝ ይስጡ!</p>
+        <p>ጣፋጭ ምግቦችን ለማዘዝ የሚፈልጉትን ምግብ ይንኩ!</p>
     </section>
 
     <section id="menu">
-        <h2>የምግብ ዝርዝር (ለመምረጥ ምግቡን ይንኩ)</h2>
+        <h2>የምግብ ዝርዝር (ለመምረጥ ይንኩ)</h2>
         <div class="menu-grid">
             <div class="cat-tag">ቁርስ እና ምሳ</div>
-            
-            <a href="#order" class="menu-link"><div class="menu-item"><span>በያይነት</span> <span class="price">120 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ስፔሻል ፓስታ</span> <span class="price">150 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ስፔሻል (Special)</span> <span class="price">160 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ዝማሙጀት</span> <span class="price">200 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ፓስታ በአትክልት</span> <span class="price">120 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ፓስታ በስጎ</span> <span class="price">120 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>እንቁላል</span> <span class="price">150 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ፍርፍር</span> <span class="price">120 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ስፔሻል ፍርፍር</span> <span class="price">160 ETB</span></div></a>
+            <a href="#order" class="menu-item-btn"><span>በያይነት</span> <span class="price">120 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ስፔሻል ፓስታ</span> <span class="price">150 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ስፔሻል (Special)</span> <span class="price">160 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ዝማሙጀት</span> <span class="price">200 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ፓስታ በአትክልት</span> <span class="price">120 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ፓስታ በስጎ</span> <span class="price">120 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>እንቁላል</span> <span class="price">150 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ፍርፍር</span> <span class="price">120 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ስፔሻል ፍርፍር</span> <span class="price">160 ETB</span></a>
             
             <div class="cat-tag">የአገልግል አማራጮች</div>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ሙሉ አገልግል (የፆም)</span> <span class="price">13,000 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ግማሽ አገልግል (የፆም)</span> <span class="price">7,000 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ሙሉ አገልግል (የፍስክ)</span> <span class="price">24,000 ETB</span></div></a>
-            <a href="#order" class="menu-link"><div class="menu-item"><span>ግማሽ አገልግል (የፍስክ)</span> <span class="price">13,000 ETB</span></div></a>
+            <a href="#order" class="menu-item-btn"><span>ሙሉ አገልግል (የፆም)</span> <span class="price">13,000 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ግማሽ አገልግል (የፆም)</span> <span class="price">7,000 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ሙሉ አገልግል (የፍስክ)</span> <span class="price">24,000 ETB</span></a>
+            <a href="#order" class="menu-item-btn"><span>ግማሽ አገልግል (የፍስክ)</span> <span class="price">13,000 ETB</span></a>
         </div>
     </section>
 
     <section id="order">
         <h2>ትዕዛዝ ማረጋገጫ</h2>
         <div class="order-box">
-            <p style="margin-bottom: 20px; font-weight: bold;">የመረጡትን ምግብ ለሳራ በቴሌግራም ይንገሯት፦</p>
+            <p style="margin-bottom: 20px; font-weight: bold;">ለመረጡት ምግብ ትዕዛዝዎን በሚፈልጉት መንገድ ይላኩ፦</p>
             
             <a href="https://t.me/Sara_catering0" class="tg-btn" target="_blank">
-                <i class="fab fa-telegram"></i> አሁን በቴሌግራም እዘዝ
+                <i class="fab fa-telegram"></i> በቴሌግራም እዘዝ (Telegram)
+            </a>
+
+            <a href="mailto:saraayalkbet@gmail.com" class="mail-btn">
+                <i class="fas fa-envelope"></i> በኢሜይል እዘዝ (Email)
             </a>
 
             <div class="payment-card">
-                <h3 style="color: var(--telebirr);"><i class="fas fa-mobile-alt"></i> በቴሌብር (Telebirr) ይክፈሉ</h3>
-                <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0;">0920121235</p>
+                <h3 style="color: var(--telebirr); margin-bottom: 10px;"><i class="fas fa-mobile-alt"></i> በቴሌብር (Telebirr) ይክፈሉ</h3>
+                <p style="font-size: 1.8rem; font-weight: bold; margin: 5px 0;">0920121235</p>
                 <p>ስም፦ <strong>ሳራ አያልቀበት</strong></p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ወልቂጤ - ናፊ ምግብ ቤት</p>
+        <p><i class="fas fa-map-marker-alt"></i> ወልቂጤ - ናፊ ምግብ ቤት</p>
+        <p>ስልክ፡ +251 920 121 235</p>
         <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">© 2026 ሳራ Catering & አገልግል</p>
     </footer>
 
