@@ -7,42 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff6b00; --dark: #1a1a1a; --light: #ffffff; --gray: #f8f9fa; }
+        :root { --primary: #ff6b00; --dark: #1a1a1a; --light: #ffffff; --gray: #f8f9fa; --telebirr: #0066b2; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Noto Sans Ethiopic', sans-serif; line-height: 1.6; background-color: var(--gray); scroll-behavior: smooth; }
-
-        /* Navigation */
-        nav { background: var(--dark); padding: 1rem; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: space-around; align-items: center; }
-        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: var(--primary); }
-
-        /* Home Section */
-        #home { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; }
-        #home h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero-btn { background: var(--primary); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; }
-
-        /* Sections General */
-        section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
-        h2 { text-align: center; color: var(--dark); margin-bottom: 30px; position: relative; padding-bottom: 10px; }
-        h2::after { content: ''; width: 60px; height: 3px; background: var(--primary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-
-        /* Menu Grid */
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-        .menu-item { background: white; padding: 15px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
-        .menu-item:hover { transform: translateY(-5px); border-bottom: 3px solid var(--primary); }
+        nav { background: var(--dark); padding: 1rem; position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: space-around; width: 100%; }
+        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        #home { height: 45vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=800'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+        section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+        h2 { text-align: center; color: var(--dark); margin-bottom: 25px; border-bottom: 3px solid var(--primary); display: inline-block; width: 100%; padding-bottom: 10px; }
+        
+        /* Menu styles with clickable links */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; }
+        .menu-link { text-decoration: none; color: inherit; transition: 0.3s; }
+        .menu-item { background: white; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid var(--primary); }
+        .menu-link:hover .menu-item { transform: scale(1.02); background: #fffcf5; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
         .price { color: var(--primary); font-weight: bold; }
-        .cat-tag { grid-column: 1 / -1; padding: 10px; background: #eee; border-radius: 5px; font-weight: bold; margin-top: 15px; }
-
-        /* Order Form */
-        .order-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
-        .btn-send { background: var(--dark); color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        .btn-send:hover { background: var(--primary); }
-
-        /* Footer */
-        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
-        .contact-info { margin-bottom: 20px; }
-        .social-link { color: var(--primary); font-size: 1.5rem; margin: 0 10px; }
+        .cat-tag { grid-column: 1 / -1; padding: 10px; background: #eee; border-radius: 5px; font-weight: bold; margin-top: 15px; text-align: center; }
+        .order-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; }
+        .tg-btn { background: #0088cc; color: white; padding: 18px; border-radius: 10px; text-decoration: none; display: block; font-weight: bold; font-size: 1.1rem; margin-bottom: 25px; }
+        .payment-card { border: 2px dashed var(--telebirr); padding: 20px; border-radius: 10px; background: #f0f7ff; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -50,67 +35,57 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#menu">Menu</a>
-        <a href="#order">Order</a>
-        <a href="#contact">Contact</a>
+        <a href="#order">እዘዝ/ክፈል</a>
     </nav>
 
     <section id="home">
         <h1>ሳራ Catering & አገልግል</h1>
-        <p>በወልቂጤ ከተማ ምርጥ ጣዕም እና ጥራት ያላቸውን ምግቦች እናቀርባለን።</p>
-        <a href="#menu" class="hero-btn">ሜኑ ይመልከቱ</a>
+        <p>የፈለጉትን ምግብ ይምረጡና ትዕዛዝ ይስጡ!</p>
     </section>
 
     <section id="menu">
-        <h2>የምግብ ዝርዝር (Menu)</h2>
+        <h2>የምግብ ዝርዝር (ለመምረጥ ምግቡን ይንኩ)</h2>
         <div class="menu-grid">
             <div class="cat-tag">ቁርስ እና ምሳ</div>
-            <div class="menu-item"><span>በያይነት</span> <span class="price">120 ETB</span></div>
-            <div class="menu-item"><span>ስፔሻል ፓስታ</span> <span class="price">150 ETB</span></div>
-            <div class="menu-item"><span>ስፔሻል (Special)</span> <span class="price">160 ETB</span></div>
-            <div class="menu-item"><span>ዝማሙጀት</span> <span class="price">200 ETB</span></div>
-            <div class="menu-item"><span>ፓስታ በአትክልት</span> <span class="price">120 ETB</span></div>
-            <div class="menu-item"><span>ፓስታ በስጎ</span> <span class="price">120 ETB</span></div>
-            <div class="menu-item"><span>እንቁላል</span> <span class="price">150 ETB</span></div>
-            <div class="menu-item"><span>ፍርፍር</span> <span class="price">120 ETB</span></div>
-            <div class="menu-item"><span>ስፔሻል ፍርፍር</span> <span class="price">160 ETB</span></div>
-
+            
+            <a href="#order" class="menu-link"><div class="menu-item"><span>በያይነት</span> <span class="price">120 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ስፔሻል ፓስታ</span> <span class="price">150 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ስፔሻል (Special)</span> <span class="price">160 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ዝማሙጀት</span> <span class="price">200 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ፓስታ በአትክልት</span> <span class="price">120 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ፓስታ በስጎ</span> <span class="price">120 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>እንቁላል</span> <span class="price">150 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ፍርፍር</span> <span class="price">120 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ስፔሻል ፍርፍር</span> <span class="price">160 ETB</span></div></a>
+            
             <div class="cat-tag">የአገልግል አማራጮች</div>
-            <div class="menu-item"><span>ሙሉ አገልግል (የፆም)</span> <span class="price">13,000 ETB</span></div>
-            <div class="menu-item"><span>ግማሽ አገልግል (የፆም)</span> <span class="price">7,000 ETB</span></div>
-            <div class="menu-item"><span>ሙሉ አገልግል (የፍስክ)</span> <span class="price">24,000 ETB</span></div>
-            <div class="menu-item"><span>ግማሽ አገልግል (የፍስክ)</span> <span class="price">13,000 ETB</span></div>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ሙሉ አገልግል (የፆም)</span> <span class="price">13,000 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ግማሽ አገልግል (የፆም)</span> <span class="price">7,000 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ሙሉ አገልግል (የፍስክ)</span> <span class="price">24,000 ETB</span></div></a>
+            <a href="#order" class="menu-link"><div class="menu-item"><span>ግማሽ አገልግል (የፍስክ)</span> <span class="price">13,000 ETB</span></div></a>
         </div>
     </section>
 
     <section id="order">
-        <h2>ኦንላይን ማዘዣ</h2>
+        <h2>ትዕዛዝ ማረጋገጫ</h2>
         <div class="order-box">
-            <form action="mailto:saraayalkbet@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="Name" placeholder="ስም" required>
-                <input type="tel" name="Phone" placeholder="ስልክ ቁጥር" required>
-                <select name="Food" required>
-                    <option value="">ምግብ ይምረጡ...</option>
-                    <option value="Beyeaynet">በያይነት</option>
-                    <option value="Zimamujet">ዝማሙጀት</option>
-                    <option value="Agelgil">አገልግል (ሙሉ/ግማሽ)</option>
-                </select>
-                <textarea name="Note" placeholder="ተጨማሪ ፍላጎት ካለዎት ይጥቀሱ..." rows="3"></textarea>
-                <button type="submit" class="btn-send">ትዕዛዝ ላክ</button>
-            </form>
+            <p style="margin-bottom: 20px; font-weight: bold;">የመረጡትን ምግብ ለሳራ በቴሌግራም ይንገሯት፦</p>
+            
+            <a href="https://t.me/Sara_catering0" class="tg-btn" target="_blank">
+                <i class="fab fa-telegram"></i> አሁን በቴሌግራም እዘዝ
+            </a>
+
+            <div class="payment-card">
+                <h3 style="color: var(--telebirr);"><i class="fas fa-mobile-alt"></i> በቴሌብር (Telebirr) ይክፈሉ</h3>
+                <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0;">0920121235</p>
+                <p>ስም፦ <strong>ሳራ አያልቀበት</strong></p>
+            </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <h2>ያግኙን</h2>
-        <div class="contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> ወልቂጤ - ናፊ ምግብ ቤት (ባስኬትቦል ሜዳ አጠገብ)</p>
-            <p><i class="fas fa-phone"></i> +251 920 121 235</p>
-        </div>
-        <div>
-            <a href="https://t.me/saraayalkbet" class="social-link"><i class="fab fa-telegram"></i></a>
-            <a href="Https://maps.app.goo.gl/adcnRjxvZGEv7grq9" class="social-link"><i class="fas fa-map-marked-alt"></i></a>
-        </div>
-        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">© 2026 ሳራ Catering & አገልግል - ወልቂጤ</p>
+    <footer>
+        <p><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ወልቂጤ - ናፊ ምግብ ቤት</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">© 2026 ሳራ Catering & አገልግል</p>
     </footer>
 
 </body>
